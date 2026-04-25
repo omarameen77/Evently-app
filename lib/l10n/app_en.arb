@@ -59,6 +59,7 @@
   "settings":"Settings",
   "noEventsFound":"No Events Found",
   "searchForEvent":"Search For Event",
-  "logout" : "Logout"
+  "logout" : "Logout",
+  "eventDetails":"Event Details"
 
 }

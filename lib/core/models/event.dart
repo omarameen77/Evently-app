@@ -9,6 +9,7 @@ class Event {
   int? eventTime;
   int? categoryId;
   List<String>?favoriteList;
+  String?location;
   Event({
     this.id,
     this.title,
@@ -17,6 +18,7 @@ class Event {
     this.eventTime,
     this.categoryId,
     this.favoriteList,
+    this.location
   });
   //create function to convert Event object to json object(to firestore)
   Map<String, dynamic> toFireStore() {
@@ -27,7 +29,8 @@ class Event {
       'eventDate': eventDate,
       'eventTime': eventTime,
       'categoryId': categoryId,
-      'favoriteList':favoriteList??[]
+      'favoriteList':favoriteList??[],
+      'location':location
     };
   }
 
@@ -37,6 +40,7 @@ class Event {
     title = data['title'];
     description = data['description'];
     eventDate = data['eventDate'];
+    location = data['location'];
     eventTime = data['eventTime'];
     favoriteList = List<String>.from(data['favoriteList'] ?? []);
 

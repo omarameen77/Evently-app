@@ -30,7 +30,6 @@ class _EventManagementScreenState extends State<EventManagementScreen>
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
-
     return ChangeNotifierProvider<HomeViewModel>.value(
       value: viewModel,
       child: Scaffold(

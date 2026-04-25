@@ -457,6 +457,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Logout'**
   String get logout;
+
+  /// No description provided for @eventDetails.
+  ///
+  /// In en, this message translates to:
+  /// **'Event Details'**
+  String get eventDetails;
 }
 
 class _AppLocalizationsDelegate

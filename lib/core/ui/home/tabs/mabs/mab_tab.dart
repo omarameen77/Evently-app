@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 
 class MapTab extends StatefulWidget {
   const MapTab({super.key});
-static const String routeName="map tab";
+static const String routeName="/map tab";
   @override
   State<MapTab> createState() => _MabTabState();
 }

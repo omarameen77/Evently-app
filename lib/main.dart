@@ -5,6 +5,8 @@ import 'package:event_app/core/ui/auth/login/login_screen.dart';
 import 'package:event_app/core/ui/auth/register/register_screen.dart';
 import 'package:event_app/core/ui/home/tabs/home/add_event/add_even_screen.dart';
 import 'package:event_app/core/ui/home/home_screen.dart';
+import 'package:event_app/core/ui/home/tabs/home/event_details/event_details.dart';
+import 'package:event_app/core/ui/home/tabs/mabs/mab_tab.dart';
 import 'package:event_app/core/ui/onpoarding/export_app.dart';
 import 'package:event_app/core/ui/onpoarding/onpoarding_screen.dart';
 import 'package:event_app/core/ui/splash_screen/splash_screen.dart';
@@ -58,6 +60,8 @@ class MyApp extends StatelessWidget {
         ForgetPasswordScreen.routeName:(context)=>ForgetPasswordScreen(),
         HomeScreen.routeName:(context)=>HomeScreen(),
         EventManagementScreen.routeName:(context)=>EventManagementScreen(),
+        MapTab.routeName:(context)=>MapTab(),
+        EventDetails.routeName:(context)=>EventDetails()
         
       },
       initialRoute: LoginScreen.routeName,
