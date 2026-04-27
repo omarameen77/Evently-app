@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:provider/provider.dart';
 
-class  HomeScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
   static const String routeName = "Home Screen";
 
@@ -19,18 +19,18 @@ class  HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
-  List<Widget> tabs = [HomeTab(),MapTab(), FavoriteTab(), ProfileTab(), ];
+  List<Widget> tabs = [HomeTab(), MapTab(), FavoriteTab(), ProfileTab()];
   @override
   Widget build(BuildContext context) {
     var appConfigProvider = Provider.of<AppConfigprovider>(context);
     return Scaffold(
       body: Column(children: [Expanded(child: tabs[selectedIndex])]),
-     
+
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           if (index == 2) {
-             Navigator.pushNamed(context, EventManagementScreen.routeName);
+            Navigator.pushNamed(context, EventManagementScreen.routeName);
             return;
           }
           if (index == 3 || index == 4) {
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         backgroundColor: appConfigProvider.isDark()
             ? AppColors.darkPurple

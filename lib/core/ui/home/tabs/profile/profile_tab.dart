@@ -24,7 +24,6 @@ class _ProfileTabState extends State<ProfileTab> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(height: height*0.04,),
           Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(vertical: 20),
@@ -51,7 +50,10 @@ class _ProfileTabState extends State<ProfileTab> {
                 ),
               ],
             ),
-            child: Imagewithcamera(),
+            child: Padding(
+              padding: EdgeInsetsGeometry.only(top: 60),
+              child: Imagewithcamera(),
+            ),
           ),
           SizedBox(height: height * 0.02),
           Padding(
@@ -78,9 +80,9 @@ class _ProfileTabState extends State<ProfileTab> {
             title: AppLocalizations.of(context)!.theme,
             icon: Icons.dark_mode,
           ),
-          SizedBox(height: height * 0.04),
+
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 240),
             child: SizedBox(
               width: double.infinity,
               height: 50,
